@@ -26,8 +26,6 @@ public class operator extends Fragment {
     private FragmentOperatorBinding binding;
     private PersonajesViewModel personajesViewModel;
     private NavController navController;
-    private String mParam1;
-    private String mParam2;
 
     class PersonajeViewHolder extends RecyclerView.ViewHolder {
         private final ViewholderPersonajeBinding binding;
@@ -62,7 +60,6 @@ public class operator extends Fragment {
                 }
             });
         }
-
         @Override
         public int getItemCount() {
             return personajes != null ? personajes.size() : 0;
@@ -76,10 +73,9 @@ public class operator extends Fragment {
             return personajes.get(posicion);
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_operator, container, false);
+        return (binding = FragmentOperatorBinding.inflate(inflater, container, false)).getRoot();
     }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -101,27 +97,23 @@ public class operator extends Fragment {
 
         personajesViewModel.obtener().observe(getViewLifecycleOwner(), new Observer<List<Personaje>>() {
             @Override
-            public void onChanged(List<Personaje> elementos) {
-                personajesAdapter.establecerLista(elementos);
+            public void onChanged(List<Personaje> personajes) {
+                personajesAdapter.establecerLista(personajes);
             }
         });
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
                 ItemTouchHelper.UP | ItemTouchHelper.DOWN,
                 ItemTouchHelper.RIGHT  | ItemTouchHelper.LEFT) {
-
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                 return true;
             }
-
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int posicion = viewHolder.getAdapterPosition();
                 Personaje elemento = personajesAdapter.obtenerElemento(posicion);
                 personajesViewModel.eliminar(elemento);
-
             }
         }).attachToRecyclerView(binding.recyclerView);
     }
-
 }

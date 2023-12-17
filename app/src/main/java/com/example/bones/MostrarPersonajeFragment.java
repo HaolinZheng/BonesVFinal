@@ -29,6 +29,18 @@ public class MostrarPersonajeFragment extends Fragment {
             @Override
             public void onChanged(Personaje elemento) {
                 binding.nombre.setText(elemento.nombre);
+                binding.class1.setText(elemento.class1);
+                binding.class2.setText(elemento.class2);
+                binding.damage.setText(elemento.damage);
+                binding.calidad.setText(elemento.calidad + " Estrellas");
+                binding.hp.setText("hp " + elemento.hp);
+                binding.atk.setText("atk " + elemento.atk);
+                binding.def.setText("def " + elemento.def);
+                binding.res.setText("res " + elemento.res);
+                binding.cost.setText("cost " + elemento.cost);
+                binding.block.setText("block " + elemento.block);
+                binding.redeploy.setText("redeploy " + elemento.redeploy);
+                binding.interval.setText("interval " + elemento.interval + "s");
             }
         });
     }
