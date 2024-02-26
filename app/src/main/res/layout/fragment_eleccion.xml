@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#E2E2E2"
     android:orientation="vertical">
 
     <TextView
+        android:layout_marginTop="30dp"
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,6 +16,10 @@
         android:fontFamily="@font/inknutantiquamedium"
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/black"
         />
     <TextView
@@ -25,6 +31,10 @@
         android:fontFamily="@font/inknutantiquamedium"
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        app:layout_constraintBottom_toTopOf="@id/text3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/black"
         />
     <TextView
@@ -36,6 +46,10 @@
         android:fontFamily="@font/inknutantiquamedium"
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/text2"
+        app:layout_constraintBottom_toTopOf="@id/text4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/black"
         />
     <TextView
@@ -47,6 +61,10 @@
         android:fontFamily="@font/inknutantiquamedium"
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/text3"
+        app:layout_constraintBottom_toTopOf="@id/boton1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/black"
         />
 
@@ -64,12 +82,17 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toBottomOf="@id/text4"
+        app:layout_constraintBottom_toTopOf="@id/boton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible"/>
 
     <Button
         android:layout_marginTop="40dp"
         android:id="@+id/boton2"
         android:padding="5sp"
+        android:layout_marginBottom="30dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -80,6 +103,10 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:visibility="gone" />
+        app:layout_constraintTop_toBottomOf="@id/boton1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

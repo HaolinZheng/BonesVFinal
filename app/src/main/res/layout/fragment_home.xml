@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/wallpaperb" />
+        android:background="@drawable/fondo" />
 
     <TextView
         android:id="@+id/tiempo"
@@ -19,9 +19,44 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="150dp"
+        android:fontFamily="@font/notosans"
         android:textSize="32sp"
         android:textColor="@color/white"
-        android:text="Hora" />
+        android:text="" />
+    <TextView
+        android:id="@+id/dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="150dp"
+        android:fontFamily="@font/notosans"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:text="" />
+    <Button
+        android:id="@+id/men"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#00FFFFFF"
+        />
+    <Button
+        android:id="@+id/perfil"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/perfil"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

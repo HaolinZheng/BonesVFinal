@@ -55,4 +55,9 @@
         android:name="com.example.bones.Registro"
         android:label="fragment_registro"
         tools:layout="@layout/fragment_registro" />
+    <fragment
+        android:id="@+id/notif"
+        android:name="com.example.bones.Notif"
+        android:label="fragment_notif"
+        tools:layout="@layout/fragment_notif" />
 </navigation>
