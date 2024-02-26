@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/menu"
-    app:startDestination="@id/home">
+    app:startDestination="@id/logo">
     <fragment
         android:id="@+id/home"
         android:name="com.example.bones.Home"
@@ -35,4 +35,24 @@
     <action
         android:id="@+id/action_nuevoPersonajeFragment"
         app:destination="@id/nuevoPersonajeFragment" />
+    <fragment
+        android:id="@+id/logo"
+        android:name="com.example.bones.Logo"
+        android:label="fragment_logo"
+        tools:layout="@layout/fragment_logo" />
+    <fragment
+        android:id="@+id/eleccion"
+        android:name="com.example.bones.Eleccion"
+        android:label="fragment_eleccion"
+        tools:layout="@layout/fragment_eleccion" />
+    <fragment
+        android:id="@+id/iniciosesion"
+        android:name="com.example.bones.Iniciosesion"
+        android:label="fragment_iniciosesion"
+        tools:layout="@layout/fragment_iniciosesion" />
+    <fragment
+        android:id="@+id/registro"
+        android:name="com.example.bones.Registro"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" />
 </navigation>
