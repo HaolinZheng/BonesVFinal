@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Ajuste"
+    android:background="@color/black">
+
+    <Button
+        android:textColor="@color/black"
+        android:id="@+id/boton1"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:paddingStart="10dp"
+        android:paddingBottom="5dp"
+        android:layout_marginStart="15dp"
+        android:text="\u003C        "
+        android:textSize="40sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/rellenables"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:id="@+id/perfil"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/perfil"
+        app:layout_constraintBottom_toTopOf="@id/biografia"
+        app:layout_constraintEnd_toStartOf="@id/nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boton1" />
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Cambiar de foto"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/biografia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/perfil"
+        app:layout_constraintTop_toBottomOf="@+id/boton1"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/biografia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cambiar biografía"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/perfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ebiografia"
+        android:layout_marginStart="10dp"
+        android:textSize="30dp"/>
+    <EditText
+        android:id="@+id/ebiografia"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rellenables"
+        android:text="Masturba tu mente, eyacula ideas."
+        app:layout_constraintTop_toBottomOf="@id/biografia"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toTopOf="@id/cID"/>
+    <TextView
+        android:id="@+id/cID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cambiar de ID de partida"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/ebiografia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ecID"
+        android:layout_marginStart="10dp"
+        android:textSize="30dp"/>
+    <EditText
+        android:id="@+id/ecID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rellenables"
+        android:padding="10dp"
+        android:text="24432***1231421"
+        app:layout_constraintTop_toBottomOf="@id/cID"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toTopOf="@id/ccontra"/>
+    <TextView
+        android:id="@+id/ccontra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cambiar de ID de partida"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/ecID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/borrar"
+        android:layout_marginStart="10dp"
+        android:textSize="30dp"/>
+    <TextView
+        android:id="@+id/borrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Borrar cuenta"
+        android:textColor="#FF0000"
+        app:layout_constraintTop_toBottomOf="@id/ccontra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="10dp"
+        android:textSize="30dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

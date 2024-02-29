@@ -60,4 +60,29 @@
         android:name="com.example.bones.Notif"
         android:label="fragment_notif"
         tools:layout="@layout/fragment_notif" />
+    <fragment
+        android:id="@+id/ajuste"
+        android:name="com.example.bones.Ajuste"
+        android:label="fragment_ajuste"
+        tools:layout="@layout/fragment_ajuste" />
+    <fragment
+        android:id="@+id/creditos"
+        android:name="com.example.bones.Creditos"
+        android:label="fragment_creditos"
+        tools:layout="@layout/fragment_creditos" />
+    <fragment
+        android:id="@+id/mapaH"
+        android:name="com.example.bones.MapaH"
+        android:label="fragment_mapa_h"
+        tools:layout="@layout/fragment_mapa_h" />
+    <fragment
+        android:id="@+id/mapaE"
+        android:name="com.example.bones.mapaE"
+        android:label="fragment_mapa_e"
+        tools:layout="@layout/fragment_mapa_e" />
+    <fragment
+        android:id="@+id/niveles"
+        android:name="com.example.bones.Niveles"
+        android:label="fragment_niveles"
+        tools:layout="@layout/fragment_niveles" />
 </navigation>
