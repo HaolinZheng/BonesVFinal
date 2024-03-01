@@ -85,4 +85,14 @@
         android:name="com.example.bones.Niveles"
         android:label="fragment_niveles"
         tools:layout="@layout/fragment_niveles" />
+    <fragment
+        android:id="@+id/estrategia"
+        android:name="com.example.bones.Estrategia"
+        android:label="fragment_estrategia"
+        tools:layout="@layout/fragment_estrategia" />
+    <fragment
+        android:id="@+id/postF"
+        android:name="com.example.bones.PostF"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post" />
 </navigation>
