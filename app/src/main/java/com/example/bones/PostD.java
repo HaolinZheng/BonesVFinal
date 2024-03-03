@@ -1,9 +1,7 @@
 package com.example.bones;
 
-import android.annotation.SuppressLint;
-import android.graphics.drawable.AnimationDrawable;
-import android.icu.util.Calendar;
-import android.icu.util.TimeZone;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,16 +14,21 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
-import com.example.bones.databinding.FragmentAjusteBinding;
-import com.example.bones.databinding.FragmentBaseBinding;
-import com.example.bones.databinding.FragmentHomeBinding;
-public class base extends Fragment {
-    FragmentBaseBinding binding;
+import com.example.bones.databinding.FragmentEleccionBinding;
+import com.example.bones.databinding.FragmentEstrategiaBinding;
+import com.example.bones.databinding.FragmentLogoBinding;
+import com.example.bones.databinding.FragmentMapaEBinding;
+import com.example.bones.databinding.FragmentMapaHBinding;
+import com.example.bones.databinding.FragmentPostBinding;
+import com.example.bones.databinding.FragmentPostDBinding;
+
+public class PostD extends Fragment {
+
+    FragmentPostDBinding binding;
     NavController navController;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,23 +36,17 @@ public class base extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
-        binding.mapa.setOnClickListener(new View.OnClickListener() {
+        binding.boton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.mapaH);
-            }
-        });
-        binding.forum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.forum);
+                navController.navigate(R.id.postF);
             }
         });
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentBaseBinding.inflate(inflater, container , false);
+        binding = FragmentPostDBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 }

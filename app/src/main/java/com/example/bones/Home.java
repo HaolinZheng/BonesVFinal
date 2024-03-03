@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -16,11 +17,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.bones.databinding.ActivityMainBinding;
 import com.example.bones.databinding.FragmentHomeBinding;
 public class Home extends Fragment {
 
     private FragmentHomeBinding binding;
+    ActivityMainBinding mainBinding;
     NavController navController;
+    private DrawerLayout drawerLayout;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,10 +50,12 @@ public class Home extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
+        mainBinding.navigationView.setVisibility(View.VISIBLE);
         binding.men.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.notif);
+                mainBinding.navigationView.setVisibility(View.GONE);
             }
         });
     }
@@ -57,6 +63,8 @@ public class Home extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container , false);
+        MainActivity mainActivity = (MainActivity) requireActivity();
+        mainBinding = mainActivity.binding;
         return binding.getRoot();
     }
 }

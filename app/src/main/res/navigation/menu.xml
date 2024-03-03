@@ -20,22 +20,6 @@
         android:label="fragment_operator"
         tools:layout="@layout/fragment_operator" />
     <fragment
-        android:id="@+id/mostrarPersonajeFragment"
-        android:name="com.example.bones.MostrarPersonajeFragment"
-        android:label="fragment_mostrar_personaje"
-        tools:layout="@layout/fragment_mostrar_personaje" />
-    <fragment
-        android:id="@+id/nuevoPersonajeFragment"
-        android:name="com.example.bones.nuevoPersonajeFragment"
-        android:label="fragment_nuevo_personaje"
-        tools:layout="@layout/fragment_nuevo_personaje" />
-    <action
-        android:id="@+id/action_mostrarPersonajeFragment"
-        app:destination="@id/mostrarPersonajeFragment" />
-    <action
-        android:id="@+id/action_nuevoPersonajeFragment"
-        app:destination="@id/nuevoPersonajeFragment" />
-    <fragment
         android:id="@+id/logo"
         android:name="com.example.bones.Logo"
         android:label="fragment_logo"
@@ -95,4 +79,14 @@
         android:name="com.example.bones.PostF"
         android:label="fragment_post"
         tools:layout="@layout/fragment_post" />
+    <fragment
+        android:id="@+id/postD"
+        android:name="com.example.bones.PostD"
+        android:label="fragment_post_d"
+        tools:layout="@layout/fragment_post_d" />
+    <fragment
+        android:id="@+id/operator1"
+        android:name="com.example.bones.Operator1"
+        android:label="fragment_operator1"
+        tools:layout="@layout/fragment_operator1" />
 </navigation>
