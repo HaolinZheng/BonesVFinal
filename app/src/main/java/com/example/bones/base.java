@@ -42,7 +42,7 @@ public class base extends Fragment {
         binding.forum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.forum);
+                navController.navigate(R.id.postF);
             }
         });
     }

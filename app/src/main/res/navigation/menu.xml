@@ -84,9 +84,4 @@
         android:name="com.example.bones.PostD"
         android:label="fragment_post_d"
         tools:layout="@layout/fragment_post_d" />
-    <fragment
-        android:id="@+id/operator1"
-        android:name="com.example.bones.Operator1"
-        android:label="fragment_operator1"
-        tools:layout="@layout/fragment_operator1" />
 </navigation>

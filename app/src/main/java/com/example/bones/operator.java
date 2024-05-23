@@ -29,12 +29,6 @@ public class operator extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
-        binding.boton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.home);
-            }
-        });
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

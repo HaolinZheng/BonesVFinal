@@ -49,4 +49,5 @@ dependencies {
     implementation ("androidx.room:room-runtime:2.2.5")
     annotationProcessor ("androidx.room:room-compiler:2.2.5")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("androidx.cardview:cardview:1.0.0")
 }

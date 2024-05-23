@@ -50,12 +50,16 @@ public class Home extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
-        mainBinding.navigationView.setVisibility(View.VISIBLE);
         binding.men.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.notif);
-                mainBinding.navigationView.setVisibility(View.GONE);
+            }
+        });
+        binding.perfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mainBinding.navigationView.setVisibility(View.VISIBLE);
             }
         });
     }
