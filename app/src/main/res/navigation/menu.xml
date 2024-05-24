@@ -60,11 +60,6 @@
         android:label="fragment_mapa_h"
         tools:layout="@layout/fragment_mapa_h" />
     <fragment
-        android:id="@+id/mapaE"
-        android:name="com.example.bones.mapaE"
-        android:label="fragment_mapa_e"
-        tools:layout="@layout/fragment_mapa_e" />
-    <fragment
         android:id="@+id/niveles"
         android:name="com.example.bones.Niveles"
         android:label="fragment_niveles"

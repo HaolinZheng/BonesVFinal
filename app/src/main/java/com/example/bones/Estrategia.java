@@ -20,7 +20,6 @@ import android.widget.TextView;
 import com.example.bones.databinding.FragmentEleccionBinding;
 import com.example.bones.databinding.FragmentEstrategiaBinding;
 import com.example.bones.databinding.FragmentLogoBinding;
-import com.example.bones.databinding.FragmentMapaEBinding;
 import com.example.bones.databinding.FragmentMapaHBinding;
 
 public class Estrategia extends Fragment {

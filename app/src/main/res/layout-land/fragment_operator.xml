@@ -26,8 +26,8 @@
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:columnCount="2"
-            android:rowCount="4"
+            android:columnCount="4"
+            android:rowCount="2"
             app:layout_constraintTop_toBottomOf="@id/titulo">
 
             <androidx.constraintlayout.widget.ConstraintLayout
